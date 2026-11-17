@@ -4,7 +4,7 @@ A 3D browser game starring Bronson, an 80 lb chocolate mix with a yellow collar 
 
 ## Play
 
-**[Play Bronson's Big Day in your browser](https://wickedhardflip.github.io/bronsons-big-day/)** (GitHub Pages; works on phones too)
+**[Play Bronson's Big Day in your browser](https://loneherd.github.io/bronsons-big-day/)** (GitHub Pages; works on phones too)
 
 [<img width="100%" alt="Watch the Bronson's Big Day trailer on YouTube" src="docs/screenshots/trailer.jpg" />](https://youtu.be/CsapECnSUrU)
 

@@ -2,7 +2,7 @@
 
 This file holds everything a new Claude account (or any developer) needs to keep working on the game. It was written on 2026-11-17, when the project moved off the Claude account it was built in. Before then, the project's notes lived in that account's project memory, and the playable copy lived in a Claude artifact. Both are gone with the old account, so this repo is now the only source of truth.
 
-Repo move, found on 2026-11-17: github.com/wickedhardflip/bronsons-big-day now redirects to github.com/loneherd/bronsons-big-day, and GitHub Pages now serves the game at https://loneherd.github.io/bronsons-big-day/ (the old wickedhardflip.github.io address returns 404). The game code (`LB_HOME` and the `onHome` hostname check in `src/game.js`), the README play link and the Worker's `ALLOWED_ORIGINS` still name wickedhardflip.github.io, so score and race posting from the new Pages address is refused (the Worker returned 403 for that origin when tested). Reading the boards still works. Fixing it needs the two hostnames in `src/game.js` updated and `https://loneherd.github.io` added to `ALLOWED_ORIGINS`. Until Brian confirms, treat the URLs below that say wickedhardflip as the pre-move values.
+GitHub username change, 2026-11-17: Brian renamed his GitHub account from wickedhardflip to loneherd. The repo is now github.com/loneherd/bronsons-big-day and Pages serves https://loneherd.github.io/bronsons-big-day/ (the old wickedhardflip.github.io address is dead). The game's `LB_HOME` and `onHome` check in `src/game.js`, the README, these docs and the Worker's `ALLOWED_ORIGINS` were all switched to loneherd the same day. Commits made before that date show the old username.
 
 Read this together with `CLAUDE.md` (rules for Claude), `README.md` (player-facing features) and `leaderboard/README.md` (API and anti-spam).
 
@@ -10,9 +10,9 @@ Read this together with `CLAUDE.md` (rules for Claude), `README.md` (player-faci
 
 "Bronson's Big Day" is a 3D browser game about Brian's dog Bronson ("Bronny") and his two owners, Mom and Andy.
 
-- Play: https://wickedhardflip.github.io/bronsons-big-day/ (GitHub Pages from `main`, folder `/`).
+- Play: https://loneherd.github.io/bronsons-big-day/ (GitHub Pages from `main`, folder `/`).
 - Trailer: https://youtu.be/CsapECnSUrU (linked in the README).
-- Repo: https://github.com/wickedhardflip/bronsons-big-day (public).
+- Repo: https://github.com/loneherd/bronsons-big-day (public).
 - Tech: Three.js r128 (cdnjs, with `vendor/three.min.js` as an offline fallback) and the Web Audio API. Every character, texture and prop is generated in code. The only audio files are four CC0 bark clips.
 - Modes: a 6-chapter story, the Lake Haigler Dash race, Free roam (unlocked after a full run), the Wardrobe and Photo mode.
 
@@ -100,7 +100,7 @@ Claude artifact (optional)
 
 Bindings on the Worker
 - `DB`: D1 binding to `hippo-heist-leaderboard`.
-- `ALLOWED_ORIGINS`: plain text, `https://wickedhardflip.github.io`.
+- `ALLOWED_ORIGINS`: plain text, `https://loneherd.github.io`.
 - `IP_SALT`: secret. It lives only in Cloudflare. Never commit it.
 
 Redeploying the Worker (only `bronson-leaderboard`)
@@ -117,7 +117,7 @@ database_name = "hippo-heist-leaderboard"
 database_id = "<from the Cloudflare dashboard>"
 
 [vars]
-ALLOWED_ORIGINS = "https://wickedhardflip.github.io"
+ALLOWED_ORIGINS = "https://loneherd.github.io"
 ```
 
   Then `npx wrangler deploy`. The existing `IP_SALT` secret stays in place. Never run Wrangler commands against the Hippo Heist Worker or tables.
@@ -127,7 +127,7 @@ ALLOWED_ORIGINS = "https://wickedhardflip.github.io"
 What the new account needs
 - A Cloudflare API token with Workers Scripts edit and D1 edit rights on Brian's Cloudflare account, given to the session as the environment variable `CLOUDFLARE_API_TOKEN` (and the account id as an environment variable too). Never paste the token into the repo or chat logs that get committed.
 - The Cloudflare connector, if Brian wants Claude to read Cloudflare directly.
-- GitHub access to `wickedhardflip/bronsons-big-day` (connect GitHub and install the Claude GitHub App on the repo).
+- GitHub access to `loneherd/bronsons-big-day` (connect GitHub and install the Claude GitHub App on the repo).
 
 ## 8. Ship log
 

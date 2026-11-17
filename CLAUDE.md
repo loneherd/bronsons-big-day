@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Bronson's Big Day is a 3D browser game (Three.js r128 plus Web Audio) about Brian's dog Bronson ("Bronny") and his owners, Mom and Andy. Live at https://loneherd.github.io/bronsons-big-day/ (the repo moved from wickedhardflip to loneherd around 2026-11-17; see the note at the top of `docs/HANDOFF.md`, since leaderboard posting still expects the old address).
+Bronson's Big Day is a 3D browser game (Three.js r128 plus Web Audio) about Brian's dog Bronson ("Bronny") and his owners, Mom and Andy. Live at https://loneherd.github.io/bronsons-big-day/. Brian's GitHub username is loneherd (it was wickedhardflip before 2026-11-17).
 
 Read `docs/HANDOFF.md` first. It holds the characters, Brian's decisions, the ship log, the leaderboard backend, deploy steps and the idea backlog. This repo is the only source of truth; there is no other project memory.
 
