@@ -2,6 +2,8 @@
 
 This file holds everything a new Claude account (or any developer) needs to keep working on the game. It was written on 2026-11-17, when the project moved off the Claude account it was built in. Before then, the project's notes lived in that account's project memory, and the playable copy lived in a Claude artifact. Both are gone with the old account, so this repo is now the only source of truth.
 
+Repo move, found on 2026-11-17: github.com/wickedhardflip/bronsons-big-day now redirects to github.com/loneherd/bronsons-big-day, and GitHub Pages now serves the game at https://loneherd.github.io/bronsons-big-day/ (the old wickedhardflip.github.io address returns 404). The game code (`LB_HOME` and the `onHome` hostname check in `src/game.js`), the README play link and the Worker's `ALLOWED_ORIGINS` still name wickedhardflip.github.io, so score and race posting from the new Pages address is refused (the Worker returned 403 for that origin when tested). Reading the boards still works. Fixing it needs the two hostnames in `src/game.js` updated and `https://loneherd.github.io` added to `ALLOWED_ORIGINS`. Until Brian confirms, treat the URLs below that say wickedhardflip as the pre-move values.
+
 Read this together with `CLAUDE.md` (rules for Claude), `README.md` (player-facing features) and `leaderboard/README.md` (API and anti-spam).
 
 ## 1. What the game is
