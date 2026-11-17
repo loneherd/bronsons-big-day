@@ -5050,8 +5050,8 @@ async function boot() {
   const bonusS = s => Math.round(s * DF().reward); // seconds a pickup adds, scaled for difficulty
   // ---------- leaderboard: fastest full game, kept by a small Cloudflare Worker in front of D1 ----------
   // A run starts when Play begins Chapter 1. Only play time counts (menus, cards and pauses don't; retries do).
-  const LB_URL = 'https://bronson-leaderboard.bri-wag.workers.dev', LB_HOME = 'https://wickedhardflip.github.io/bronsons-big-day/';
-  const onHome = location.hostname === 'wickedhardflip.github.io';
+  const LB_URL = 'https://bronson-leaderboard.bri-wag.workers.dev', LB_HOME = 'https://loneherd.github.io/bronsons-big-day/';
+  const onHome = location.hostname === 'loneherd.github.io';
   const fmtTime = sec => `${Math.floor(sec / 60)}:${(sec % 60).toFixed(1).padStart(4, '0')}`;
   const runTime = r => r ? r.splits.reduce((a, b) => a + Math.round(b * 10) / 10, 0) : 0; // same rounding as the posted time
   // rows are kept per tab: all difficulties together, or one board each
